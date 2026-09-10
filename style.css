@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #fff7e8;
+    font-family: "Noto Serif Devanagari", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b2600;
+}
+
+.invitation {
+    width: 90%;
+    max-width: 500px;
+    min-height: 90vh;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: #fffaf0;
+
+    border: 2px solid #d99b2b;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(120, 60, 0, 0.18);
+
+    animation: appear 1.5s ease;
+}
+
+/* Top mantra */
+
+.mantra {
+    color: #a84b00;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Welcome */
+
+.welcome {
+    font-size: 17px;
+    color: #c27a00;
+    letter-spacing: 2px;
+}
+
+/* Bappa symbol */
+
+.ganpati {
+    width: 180px;
+    height: 180px;
+
+    margin: 25px auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff0cf;
+
+    border: 3px solid #d99b2b;
+
+    box-shadow:
+        0 0 20px rgba(218, 150, 30, 0.3),
+        0 0 50px rgba(218, 150, 30, 0.15);
+
+    overflow: hidden;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.ganpati img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details */
+
+.details {
+    margin: 30px 0;
+
+    padding: 20px;
+
+    border-top: 1px solid #e1b75d;
+    border-bottom: 1px solid #e1b75d;
+}
+
+.details div {
+    margin: 15px 0;
+}
+
+.details span {
+    font-size: 22px;
+}
+
+.details h3 {
+    color: #a63d00;
+    margin: 4px;
+}
+
+.details p {
+    font-size: 15px;
+}
+
+/* Blessing */
+
+.blessing {
+    font-size: 15px;
+    line-height: 1.9;
+    font-style: italic;
+    color: #8a5100;
+}
+
+/* Flowers */
+
+.flowers {
+    margin: 25px 0;
+    font-size: 20px;
+}
+
+/* Bottom */
+
+h2 {
+    font-size: 21px;
+    color: #a63d00;
+}
+
+/* Animations */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+
+    .invitation {
+        width: 94%;
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+}
+/* Main Page Button */
+
+.button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 14px 25px;
+
+    background: #a63d00;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background: #c45a00;
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 10px 18px;
+
+    background: #a63d00;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+    background: #c45a00;
+}
+
+/* Main Page */
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
