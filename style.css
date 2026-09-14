@@ -1,6 +1,10 @@
-/* ============================= */
-/* BASIC RESET */
-/* ============================= */
+/* =========================================
+   GANPATI INVITATION WEBSITE
+   Complete style.css
+   ========================================= */
+
+
+/* ---------- BASIC RESET ---------- */
 
 * {
     margin: 0;
@@ -9,15 +13,18 @@
 }
 
 
-/* ============================= */
-/* BODY */
-/* ============================= */
+/* ---------- BODY ---------- */
 
 body {
     min-height: 100vh;
 
     background:
-        radial-gradient(circle at top, #fffdf5 0%, #fff5df 45%, #fce8c4 100%);
+        radial-gradient(
+            circle at top,
+            #fffdf5 0%,
+            #fff5df 45%,
+            #fce8c4 100%
+        );
 
     font-family: "Noto Serif Devanagari", serif;
 
@@ -31,9 +38,7 @@ body {
 }
 
 
-/* ============================= */
-/* MAIN INVITATION CARD */
-/* ============================= */
+/* ---------- MAIN CARD ---------- */
 
 .invitation {
     position: relative;
@@ -59,11 +64,11 @@ body {
 
     overflow: hidden;
 
-    animation: pageAppear 1.2s ease;
+    animation: pageEnter 1s ease;
 }
 
 
-/* Inner Border */
+/* ---------- INNER DECORATIVE BORDER ---------- */
 
 .invitation::before {
     content: "";
@@ -83,9 +88,7 @@ body {
 }
 
 
-/* ============================= */
-/* TOP DECORATION */
-/* ============================= */
+/* ---------- TOP & BOTTOM DECORATION ---------- */
 
 .top-decoration,
 .bottom-decoration {
@@ -99,9 +102,13 @@ body {
 }
 
 
-/* ============================= */
-/* MANTRA */
-/* ============================= */
+.bottom-decoration {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+
+/* ---------- MANTRA ---------- */
 
 .mantra {
     color: #9e3d0a;
@@ -114,9 +121,7 @@ body {
 }
 
 
-/* ============================= */
-/* WELCOME */
-/* ============================= */
+/* ---------- WELCOME ---------- */
 
 .welcome {
     color: #c17a0a;
@@ -129,9 +134,9 @@ body {
 }
 
 
-/* ============================= */
-/* BAPPA IMAGE */
-/* ============================= */
+/* =========================================
+   BAPPA IMAGE
+   ========================================= */
 
 .ganpati {
     width: 190px;
@@ -165,9 +170,7 @@ body {
 }
 
 
-/* ============================= */
-/* SMALL BAPPA IMAGE PAGE 2 */
-/* ============================= */
+/* ---------- SMALL BAPPA IMAGE ON PAGE 2 ---------- */
 
 .small-ganpati {
     width: 125px;
@@ -177,9 +180,9 @@ body {
 }
 
 
-/* ============================= */
-/* MAIN HEADING */
-/* ============================= */
+/* =========================================
+   HEADINGS
+   ========================================= */
 
 h1 {
     color: #a63d00;
@@ -190,13 +193,23 @@ h1 {
 
     margin-bottom: 12px;
 
-    text-shadow: 0 2px 8px rgba(166, 61, 0, 0.08);
+    text-shadow:
+        0 2px 8px rgba(166, 61, 0, 0.08);
 }
 
 
-/* ============================= */
-/* SMALL DIVIDER */
-/* ============================= */
+h2 {
+    color: #a63d00;
+
+    font-size: 23px;
+
+    margin-top: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ---------- SMALL DIVIDER ---------- */
 
 .small-divider {
     color: #d99b2b;
@@ -207,9 +220,9 @@ h1 {
 }
 
 
-/* ============================= */
-/* MESSAGE */
-/* ============================= */
+/* =========================================
+   TEXT
+   ========================================= */
 
 .message {
     color: #6b2b08;
@@ -227,24 +240,7 @@ h1 {
 }
 
 
-/* ============================= */
-/* FLOWERS */
-/* ============================= */
-
-.flowers {
-    margin: 22px 0;
-
-    font-size: 19px;
-
-    letter-spacing: 2px;
-
-    animation: gentleGlow 3s ease-in-out infinite;
-}
-
-
-/* ============================= */
-/* EXTRA INVITATION TEXT */
-/* ============================= */
+/* ---------- EXTRA INVITATION TEXT ---------- */
 
 .invite-line {
     font-size: 15px;
@@ -257,15 +253,87 @@ h1 {
 }
 
 
-/* ============================= */
-/* BUTTON */
-/* ============================= */
+/* ---------- FLOWERS ---------- */
+
+.flowers {
+    margin: 22px 0;
+
+    font-size: 19px;
+
+    letter-spacing: 2px;
+
+    animation: gentleGlow 3s ease-in-out infinite;
+}
 
 
+/* =========================================
+   BUTTON
+   ========================================= */
 
-/* ============================= */
-/* DETAILS SECTION */
-/* ============================= */
+.button {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9e3600,
+            #c85b0a
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 7px 20px rgba(166, 61, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: buttonAppear 1.2s ease;
+}
+
+
+.button span {
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(166, 61, 0, 0.3);
+}
+
+
+.button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   PAGE 2 - DETAILS
+   ========================================= */
 
 .details {
     margin: 28px 0;
@@ -278,9 +346,7 @@ h1 {
 }
 
 
-/* ============================= */
-/* EACH DETAIL */
-/* ============================= */
+/* ---------- EACH DETAIL ---------- */
 
 .detail-item {
     display: flex;
@@ -294,6 +360,8 @@ h1 {
     margin: 20px 0;
 }
 
+
+/* ---------- DETAIL ICON ---------- */
 
 .detail-icon {
     width: 42px;
@@ -316,6 +384,8 @@ h1 {
 }
 
 
+/* ---------- DETAIL HEADING ---------- */
+
 .detail-item h3 {
     color: #a63d00;
 
@@ -324,6 +394,8 @@ h1 {
     margin-bottom: 4px;
 }
 
+
+/* ---------- DETAIL TEXT ---------- */
 
 .detail-item p {
     color: #6b2b08;
@@ -339,9 +411,9 @@ h1 {
 }
 
 
-/* ============================= */
-/* BLESSING BOX */
-/* ============================= */
+/* =========================================
+   BLESSING BOX
+   ========================================= */
 
 .blessing-box {
     margin: 25px auto;
@@ -371,24 +443,7 @@ h1 {
 }
 
 
-/* ============================= */
-/* FINAL HEADING */
-/* ============================= */
-
-h2 {
-    color: #a63d00;
-
-    font-size: 23px;
-
-    margin-top: 10px;
-
-    margin-bottom: 12px;
-}
-
-
-/* ============================= */
-/* THANK YOU TEXT */
-/* ============================= */
+/* ---------- FINAL TEXT ---------- */
 
 .thank-you {
     color: #9a6518;
@@ -401,9 +456,9 @@ h2 {
 }
 
 
-/* ============================= */
-/* BACK BUTTON */
-/* ============================= */
+/* =========================================
+   BACK BUTTON
+   ========================================= */
 
 .back-button {
     position: fixed;
@@ -426,7 +481,9 @@ h2 {
     box-shadow:
         0 5px 15px rgba(0, 0, 0, 0.18);
 
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 
     z-index: 100;
 }
@@ -439,25 +496,34 @@ h2 {
 }
 
 
-/* ============================= */
-/* ANIMATIONS */
-/* ============================= */
+/* =========================================
+   ANIMATIONS
+   ========================================= */
 
-@keyframes pageAppear {
+
+/* Page appears smoothly */
+
+@keyframes pageEnter {
 
     from {
         opacity: 0;
 
-        transform: translateY(25px);
+        transform:
+            scale(0.96)
+            translateY(20px);
     }
 
     to {
         opacity: 1;
 
-        transform: translateY(0);
+        transform:
+            scale(1)
+            translateY(0);
     }
 }
 
+
+/* Bappa gently floats */
 
 @keyframes floating {
 
@@ -475,6 +541,8 @@ h2 {
 }
 
 
+/* Flowers gently glow */
+
 @keyframes gentleGlow {
 
     0% {
@@ -491,9 +559,29 @@ h2 {
 }
 
 
-/* ============================= */
-/* MOBILE DESIGN */
-/* ============================= */
+/* Button appears slightly later */
+
+@keyframes buttonAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE DESIGN
+   ========================================= */
 
 @media (max-width: 500px) {
 
@@ -523,11 +611,15 @@ h2 {
     }
 
 
+    /* Main Bappa image */
+
     .ganpati {
         width: 155px;
         height: 155px;
     }
 
+
+    /* Smaller Bappa on Page 2 */
 
     .small-ganpati {
         width: 110px;
@@ -537,6 +629,11 @@ h2 {
 
     h1 {
         font-size: 25px;
+    }
+
+
+    h2 {
+        font-size: 20px;
     }
 
 
@@ -584,11 +681,6 @@ h2 {
 
     .blessing {
         font-size: 14px;
-    }
-
-
-    h2 {
-        font-size: 20px;
     }
 
 
