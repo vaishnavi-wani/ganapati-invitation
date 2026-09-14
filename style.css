@@ -1,241 +1,604 @@
+/* ============================= */
+/* BASIC RESET */
+/* ============================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
 body {
     min-height: 100vh;
-    background: #fff7e8;
+
+    background:
+        radial-gradient(circle at top, #fffdf5 0%, #fff5df 45%, #fce8c4 100%);
+
     font-family: "Noto Serif Devanagari", serif;
+
+    color: #6b2b08;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #6b2600;
+
+    padding: 25px 15px;
 }
+
+
+/* ============================= */
+/* MAIN INVITATION CARD */
+/* ============================= */
 
 .invitation {
-    width: 90%;
+    position: relative;
+
+    width: 100%;
     max-width: 500px;
+
     min-height: 90vh;
-    padding: 35px 25px;
+
+    padding: 45px 28px 55px;
+
     text-align: center;
 
-    background: #fffaf0;
+    background: rgba(255, 251, 241, 0.96);
 
     border: 2px solid #d99b2b;
-    border-radius: 25px;
 
-    box-shadow: 0 10px 35px rgba(120, 60, 0, 0.18);
+    border-radius: 28px;
 
-    animation: appear 1.5s ease;
+    box-shadow:
+        0 15px 45px rgba(120, 60, 0, 0.15),
+        0 0 0 7px rgba(217, 155, 43, 0.06);
+
+    overflow: hidden;
+
+    animation: pageAppear 1.2s ease;
 }
 
-/* Top mantra */
+
+/* Inner Border */
+
+.invitation::before {
+    content: "";
+
+    position: absolute;
+
+    top: 9px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
+
+    border: 1px solid rgba(217, 155, 43, 0.35);
+
+    border-radius: 21px;
+
+    pointer-events: none;
+}
+
+
+/* ============================= */
+/* TOP DECORATION */
+/* ============================= */
+
+.top-decoration,
+.bottom-decoration {
+    color: #d99b2b;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ============================= */
+/* MANTRA */
+/* ============================= */
 
 .mantra {
-    color: #a84b00;
-    font-size: 18px;
-    margin-bottom: 15px;
+    color: #9e3d0a;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
 }
 
-/* Welcome */
+
+/* ============================= */
+/* WELCOME */
+/* ============================= */
 
 .welcome {
+    color: #c17a0a;
+
     font-size: 17px;
-    color: #c27a00;
-    letter-spacing: 2px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 22px;
 }
 
-/* Bappa symbol */
+
+/* ============================= */
+/* BAPPA IMAGE */
+/* ============================= */
 
 .ganpati {
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
 
-    margin: 25px auto;
+    margin: 0 auto 25px;
 
     border-radius: 50%;
 
+    overflow: hidden;
+
+    border: 4px solid #d99b2b;
+
+    background: #fff0cf;
+
+    box-shadow:
+        0 0 20px rgba(217, 155, 43, 0.3),
+        0 0 55px rgba(217, 155, 43, 0.15);
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+.ganpati img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ============================= */
+/* SMALL BAPPA IMAGE PAGE 2 */
+/* ============================= */
+
+.small-ganpati {
+    width: 125px;
+    height: 125px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* MAIN HEADING */
+/* ============================= */
+
+h1 {
+    color: #a63d00;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    text-shadow: 0 2px 8px rgba(166, 61, 0, 0.08);
+}
+
+
+/* ============================= */
+/* SMALL DIVIDER */
+/* ============================= */
+
+.small-divider {
+    color: #d99b2b;
+
+    font-size: 20px;
+
+    margin: 5px 0 18px;
+}
+
+
+/* ============================= */
+/* MESSAGE */
+/* ============================= */
+
+.message {
+    color: #6b2b08;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+
+.message strong {
+    color: #a84a08;
+}
+
+
+/* ============================= */
+/* FLOWERS */
+/* ============================= */
+
+.flowers {
+    margin: 22px 0;
+
+    font-size: 19px;
+
+    letter-spacing: 2px;
+
+    animation: gentleGlow 3s ease-in-out infinite;
+}
+
+
+/* ============================= */
+/* EXTRA INVITATION TEXT */
+/* ============================= */
+
+.invite-line {
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: #87500d;
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+
+
+/* ============================= */
+/* DETAILS SECTION */
+/* ============================= */
+
+.details {
+    margin: 28px 0;
+
+    padding: 10px 5px;
+
+    border-top: 1px solid #dfb45a;
+
+    border-bottom: 1px solid #dfb45a;
+}
+
+
+/* ============================= */
+/* EACH DETAIL */
+/* ============================= */
+
+.detail-item {
     display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+
+.detail-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
     justify-content: center;
     align-items: center;
 
     background: #fff0cf;
 
-    border: 3px solid #d99b2b;
+    border: 1px solid #e2b95e;
 
-    box-shadow:
-        0 0 20px rgba(218, 150, 30, 0.3),
-        0 0 50px rgba(218, 150, 30, 0.15);
+    border-radius: 50%;
 
-    overflow: hidden;
+    font-size: 19px;
 
-    animation: float 3s ease-in-out infinite;
+    flex-shrink: 0;
 }
 
-.ganpati img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-/* Details */
-
-.details {
-    margin: 30px 0;
-
-    padding: 20px;
-
-    border-top: 1px solid #e1b75d;
-    border-bottom: 1px solid #e1b75d;
-}
-
-.details div {
-    margin: 15px 0;
-}
-
-.details span {
-    font-size: 22px;
-}
-
-.details h3 {
+.detail-item h3 {
     color: #a63d00;
-    margin: 4px;
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
 }
 
-.details p {
-    font-size: 15px;
+
+.detail-item p {
+    color: #6b2b08;
+
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
-/* Blessing */
+
+.detail-item strong {
+    color: #a84a08;
+}
+
+
+/* ============================= */
+/* BLESSING BOX */
+/* ============================= */
+
+.blessing-box {
+    margin: 25px auto;
+
+    padding: 18px 15px;
+
+    max-width: 370px;
+
+    background: #fff5dc;
+
+    border-left: 3px solid #d99b2b;
+
+    border-right: 3px solid #d99b2b;
+
+    border-radius: 10px;
+}
+
 
 .blessing {
+    color: #87500d;
+
     font-size: 15px;
-    line-height: 1.9;
+
+    line-height: 2;
+
     font-style: italic;
-    color: #8a5100;
 }
 
-/* Flowers */
 
-.flowers {
-    margin: 25px 0;
-    font-size: 20px;
-}
-
-/* Bottom */
+/* ============================= */
+/* FINAL HEADING */
+/* ============================= */
 
 h2 {
-    font-size: 21px;
     color: #a63d00;
+
+    font-size: 23px;
+
+    margin-top: 10px;
+
+    margin-bottom: 12px;
 }
 
-/* Animations */
 
-@keyframes appear {
+/* ============================= */
+/* THANK YOU TEXT */
+/* ============================= */
 
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+.thank-you {
+    color: #9a6518;
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-size: 14px;
 
+    font-style: italic;
+
+    line-height: 1.8;
 }
 
-@keyframes float {
 
-    0%, 100% {
-        transform: translateY(0);
-    }
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
 
-    50% {
-        transform: translateY(-8px);
-    }
-
-}
-
-/* Mobile */
-
-@media (max-width: 450px) {
-
-    .invitation {
-        width: 94%;
-        padding: 30px 18px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    .message {
-        font-size: 15px;
-    }
-
-}
-/* Main Page Button */
-
-.button {
-    display: inline-block;
-
-    margin-top: 15px;
-    padding: 14px 25px;
-
-    background: #a63d00;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-
-.button:hover {
-    transform: scale(1.05);
-    background: #c45a00;
-}
-
-/* Back Button */
 .back-button {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
 
-    padding: 10px 18px;
+    left: 18px;
+    bottom: 18px;
+
+    padding: 9px 17px;
 
     background: #a63d00;
+
     color: white;
 
     text-decoration: none;
 
     border-radius: 25px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.18);
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 
     z-index: 100;
 }
 
+
 .back-button:hover {
-    transform: scale(1.05);
     background: #c45a00;
+
+    transform: translateY(-3px);
 }
 
-/* Main Page */
 
-.home-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes gentleGlow {
+
+    0% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.75;
+    }
+}
+
+
+/* ============================= */
+/* MOBILE DESIGN */
+/* ============================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .invitation {
+        min-height: 95vh;
+
+        padding: 35px 20px 60px;
+
+        border-radius: 23px;
+    }
+
+
+    .mantra {
+        font-size: 17px;
+    }
+
+
+    .welcome {
+        font-size: 15px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .ganpati {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    .small-ganpati {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    .message {
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+
+    .invite-line {
+        font-size: 14px;
+    }
+
+
+    .button {
+        font-size: 14px;
+
+        padding: 13px 20px;
+    }
+
+
+    .detail-item {
+        gap: 12px;
+    }
+
+
+    .detail-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+
+    .detail-item h3 {
+        font-size: 16px;
+    }
+
+
+    .detail-item p {
+        font-size: 13px;
+    }
+
+
+    .blessing {
+        font-size: 14px;
+    }
+
+
+    h2 {
+        font-size: 20px;
+    }
+
+
+    .back-button {
+        left: 12px;
+        bottom: 12px;
+
+        font-size: 12px;
+
+        padding: 8px 14px;
+    }
+
 }
