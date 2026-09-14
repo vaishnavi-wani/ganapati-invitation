@@ -266,26 +266,14 @@ h2 {
 }
 
 
-/* =========================================
-   BUTTON
-   ========================================= */
-
 .button {
-    display: inline-flex;
+    display: inline-block;
 
-    justify-content: center;
-    align-items: center;
-
-    gap: 10px;
+    margin-top: 15px;
 
     padding: 14px 25px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #9e3600,
-            #c85b0a
-        );
+    background: #a63d00;
 
     color: white;
 
@@ -295,42 +283,18 @@ h2 {
 
     font-size: 15px;
 
-    box-shadow:
-        0 7px 20px rgba(166, 61, 0, 0.25);
+    box-shadow: 0 6px 18px rgba(166, 61, 0, 0.25);
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    position: relative;
-
-    z-index: 2;
-
-    animation: buttonAppear 1.2s ease;
+    transition: 0.3s ease;
 }
-
-
-.button span {
-    font-size: 20px;
-
-    transition:
-        transform 0.3s ease;
-}
-
 
 .button:hover {
+    background: #c45a00;
+
     transform: translateY(-3px);
 
-    box-shadow:
-        0 11px 25px rgba(166, 61, 0, 0.3);
+    box-shadow: 0 9px 22px rgba(166, 61, 0, 0.3);
 }
-
-
-.button:hover span {
-    transform: translateX(5px);
-}
-
-
 /* =========================================
    PAGE 2 - DETAILS
    ========================================= */
